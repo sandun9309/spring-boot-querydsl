@@ -12,11 +12,11 @@ public class StudentManager
 
 		BooleanBuilder where = new BooleanBuilder();
 
-		if ( firstName != null && !"".equals( firstName ) )
+		if ( firstName != null && !firstName.isEmpty() )
 		{
 			where.and( student.firstName.eq( firstName ) );
 		}
-		if ( address != null && !"".equals( address ) )
+		if ( address != null && !address.isEmpty() )
 		{
 			where.and( student.address.likeIgnoreCase( address ) );
 		}
